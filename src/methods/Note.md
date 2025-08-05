@@ -6,10 +6,13 @@ of code.
 ## Basic Syntax
 
 The basic syntax of a method in Java is as follows:
+
 ```java
-accessModifier returnType methodName(parameterType parameterName) {
+accessModifier returnType
+
+methodName(parameterType parameterName) {
 // method body
-return value; // optional, based on return type
+    return value; // optional, based on return type
 }
 ```
 
@@ -34,7 +37,7 @@ Here is an example of a simple method that adds two integers:
 
 ```java
 public static int add(int a, int b) {
-return a + b;
+    return a + b;
 }
 ````
 
@@ -44,10 +47,20 @@ return a + b;
   parameters.
 
 - **Arguments**: These are the actual values passed to the method when it is called. For instance:
+- **varargs**: allow a method to accept a varying number of arguments. It makes method more flexible, no need for method overloading. Java will pack arguments as an array(ellipsis).
 
 ````java
 int sum = add(5, 10); // Here, 5 and 10 are arguments.
+
+static double average(double... nums){
+    double sum=0;
+    for(double num : nums){
+        sum+=num;
+    }
+    return sum/nums.length;
+}
 ````
+
 ### Return Statement
 
 - The return statement is used to exit a method and optionally return a value to the caller. If a method has a return
@@ -60,13 +73,14 @@ is called method overloading.
 
 ````java
 public static int add(int a, int b) {
-return a + b;
+    return a + b;
 }
 
 public static double add(double a, double b) {
-return a + b;
+    return a + b;
 }
 ````
+
 ### Method Scope
 
 - **Local Variables**: Variables declared inside a method are local to that method and cannot be accessed outside of it.
@@ -81,7 +95,7 @@ return a + b;
 
 ````java
 public static void printMessage() {
-System.out.println("Hello, World!");
+    System.out.println("Hello, World!");
 }
 ````
 
@@ -89,9 +103,10 @@ System.out.println("Hello, World!");
 
 ````java
 public void display() {
-System.out.println("This is an instance method.");
+    System.out.println("This is an instance method.");
 }
 ````
+
 ### Conclusion
 
 Methods are fundamental in Java programming as they promote code reusability and organization. Understanding how to

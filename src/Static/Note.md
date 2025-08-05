@@ -116,12 +116,12 @@ public class Main {
 
 ## 🔹 Summary
 
-| Feature         | Can be static? | Notes |
-|----------------|----------------|-------|
-| Variable        | ✅ Yes         | Shared across all instances |
-| Method          | ✅ Yes         | Cannot access instance variables directly |
-| Block           | ✅ Yes         | Used for static initialization |
-| Nested Class    | ✅ Yes         | Can be instantiated without outer class object |
+| Feature      | Can be static? | Notes                                          |
+|--------------|----------------|------------------------------------------------|
+| Variable     | ✅ Yes          | Shared across all instances                    |
+| Method       | ✅ Yes          | Cannot access instance variables directly      |
+| Block        | ✅ Yes          | Used for static initialization                 |
+| Nested Class | ✅ Yes          | Can be instantiated without outer class object |
 
 - Static members belong to the class, not instances.
 - Use class name to access static members.

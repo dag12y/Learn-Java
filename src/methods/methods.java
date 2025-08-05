@@ -3,32 +3,35 @@ package methods;
 public class methods {
 
     // Method to add two integers
-    public static int add(int a, int b) {
+    static int add(int a, int b) {
         return a + b;
     }
 
     // Method to add two double values (method overloading)
-    public static double add(double a, double b) {
+    static double add(double a, double b) {
         return a + b;
     }
 
     // Method to subtract two integers
-    public static int subtract(int a, int b) {
+    static int subtract(int a, int b) {
         return a - b;
     }
 
     // Method to multiply two integers
-    public static int multiply(int a, int b) {
+    static int multiply(int a, int b) {
         return a * b;
     }
 
     // Method to divide two integers
-    public static double divide(int a, int b) {
+    static double divide(int a, int b) {
         if (b == 0) {
             System.out.println("Error: Division by zero");
             return 0; // Return 0 or handle it as needed
         }
         return (double) a / b;
+    }
+    static boolean checkAge(int age){
+        return (age>=18) ? true : false;
     }
 
     // Main method to execute the program
@@ -46,5 +49,13 @@ public class methods {
         double doubleNum2 = 5.5;
 
         System.out.println("Addition (double): " + add(doubleNum1, doubleNum2));
+
+        int age=2;
+        if(checkAge(age)) {
+            System.out.println("You are eligible.");
+        }else{
+            System.out.println("you are not eligible");
+        }
+
     }
 }
